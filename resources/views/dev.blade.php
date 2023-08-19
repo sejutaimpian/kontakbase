@@ -19,27 +19,35 @@
 
 <body class="antialiased bg-amber-50">
     <div class="text-center text-3xl font-bold">Welcome Dev</div>
-    <form action="/dev" method="post" class="" x-data="{
+    <form action="/request" method="post" class="" x-data="{
         publicIndex: 0,
-        printLevel(index){
-            return `levels[${index}][level]`;
+        printNamaDepan(index){
+            return `kontak[${index}][nama_depan]`;
         },
-        printBuild(index){
-            return `levels[${index}][build]`;
-        }
-    }">
+        printNamaBelakang(index){
+            return `kontak[${index}][nama_belakang]`;
+        },
+        printNomorTelepon(index){
+            return `kontak[${index}][nomor_telepon]`;
+        },
+        banyakKontak: 1,
+        }">
         @csrf
-        <div x-data="{index: publicIndex++}">
-            <input type="text" class="form-control" placeholder="level" :name="printLevel(index)">
-            <input type="text" class="form-control" placeholder="build time" :name="printBuild(index)">
-            <button type="button" x-on:click="printIndex(index)">Console</button>
-        </div>
-        <div x-data="{index: publicIndex++}">
-            <input type="text" class="form-control" placeholder="level" :name="printLevel(index)">
-            <input type="text" class="form-control" placeholder="build time" :name="printBuild(index)">
-            <button type="button" x-on:click="printIndex(index)">Console</button>
-        </div>
-        <button>Submit</button>
+        <template x-for="i in banyakKontak">
+            <div x-data="{index: publicIndex++}">
+                <input type="text" class="form-control" placeholder="Nama Depan" :name="printNamaDepan(index)">
+                <input type="text" class="form-control" placeholder="Nama Belakang" :name="printNamaBelakang(index)">
+                <input type="text" class="form-control" placeholder="628..." :name="printNomorTelepon(index)">
+            </div>
+        </template>
+        <button class="border-2 border-sky-300 px-2 py-0.5 rounded-xl">Submit</button>
+        <button class="border-2 border-sky-300 px-2 py-0.5 rounded-xl" type="button" x-on:click="banyakKontak++">Add
+            Element</button>
+
+        {{-- <input type="text" name="kode_kontak" id="kode_kontak" placeholder="kode_kontak">
+        <input type="text" name="judul" id="judul" placeholder="judul">
+        <input type="text" name="keterangan" id="keterangan" placeholder="keterangan">
+        <button class="border-2 border-sky-300 px-2 py-0.5 rounded-xl">Submit</button> --}}
     </form>
 </body>
 

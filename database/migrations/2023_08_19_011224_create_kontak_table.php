@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('kontak', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kontak_room_kode_kontak')->constrained(
+            $table->foreignId('kontak_room_id')->constrained(
                 table: 'kontak_room',
-                column: 'kode_kontak',
-                indexName: 'kontak_kontak_room_kode_kontak'
+                column: 'id',
+                indexName: 'kontak_kontak_room_id'
             );
             $table->string('nama_depan', 20);
             $table->string('nama_belakang', 20);

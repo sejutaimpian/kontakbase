@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kontak_room', function (Blueprint $table) {
-            $table->bigIncrements('kode_kontak');
+            $table->id();
+            $table->string('kode_kontak')->unique();
             $table->string('judul');
             $table->text('keterangan');
             $table->timestamps();

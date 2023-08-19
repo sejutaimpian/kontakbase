@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::get('/dev', [DevController::class, 'index']);
 Route::post('/dev', [DevController::class, 'post']);
+Route::post('/request', [DevController::class, 'request']);
