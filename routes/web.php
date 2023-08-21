@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DevController;
+use App\Livewire\HomePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomePage::class);
 Route::get('/dev', [DevController::class, 'index']);
 Route::post('/dev', [DevController::class, 'post']);
 Route::post('/request', [DevController::class, 'request']);

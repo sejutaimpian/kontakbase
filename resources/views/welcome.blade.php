@@ -7,16 +7,13 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="logo-kontakbase.png" type="image/x-icon">
 
     <!-- Styles -->
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased text-gray-100 bg-gray-900">
+<body class="pb-20 antialiased text-gray-100 bg-gray-900">
     {{-- nav --}}
     <nav class="sticky top-0 z-10 flex gap-2 px-8 py-2 border-b bg-gray-900/50 border-b-gray-800 backdrop-blur-xl">
         <div class="flex items-center flex-none gap-2 sm:flex-1">
@@ -196,9 +193,6 @@
             </form>
         </div>
     </div>
-    <div class="h-96"></div>
-    <div class="h-96"></div>
-    <div class="h-96"></div>
 </body>
 
 </html>
