@@ -1,13 +1,20 @@
 <div class="container px-4 mx-auto">
     <div class="pt-6 mb-20 text-center">
-        <div
-            class="px-4 py-1 mx-auto text-lg font-semibold text-pink-400 bg-gray-800 border border-gray-700 sm:text-xl w-fit">
-            dosen-unpas-bandung</div>
+        <div x-data="{
+            copyToClipboard(copyable){
+                navigator.clipboard.writeText(copyable)
+                alert('Berhasil Dicopy')
+            }
+        }" copyable="{{ url()->current() }}" x-on:click="copyToClipboard($el.getAttribute('copyable'))"
+            title="Copy Link"
+            class="px-4 py-1 mx-auto text-lg cursor-pointer font-semibold text-pink-400 bg-gray-800 border border-gray-700 sm:text-xl w-fit">
+            {{ $kontak_room->kode_kontak }}
+        </div>
         <h1 class="my-4 text-4xl font-semibold leading-tight text-white sm:mb-8 sm:text-6xl">
-            Dosen Universitas Pasundan Bandung
+            {{ $kontak_room->judul }}
         </h1>
         <p class="text-lg text-gray-400 sm:text-xl">
-            Room kontak para dosen unpas tahun ajaran 2023/2024
+            {{ $kontak_room->keterangan }}
         </p>
     </div>
     <div class="min-h-[75vh]">
