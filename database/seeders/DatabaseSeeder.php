@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         KontakRoom::create([
-            'kode_kontak' => 'dosen-unpas-bandung',
+            'kode_kontak' => 'dosen-unpas',
             'judul' => 'Dosen Universitas Pasundan Bandung',
             'keterangan' => 'Room kontak para dosen unpas tahun ajaran 2023/2024'
         ]);
