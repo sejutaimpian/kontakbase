@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DevController;
+use App\Livewire\FormBuatRoom;
 use App\Livewire\HomePage;
 use App\Livewire\RoomPage;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomePage::class);
+Route::get('/buat-room', FormBuatRoom::class);
 Route::get('/room', RoomPage::class);
 Route::get('/dev', [DevController::class, 'index']);
 Route::post('/dev', [DevController::class, 'post']);

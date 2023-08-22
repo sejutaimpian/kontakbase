@@ -1,4 +1,4 @@
-<div class="container px-4 pb-20 mx-auto">
+<div class="container px-4 mx-auto">
     <div class="pt-6 mb-20 text-center">
         <div
             class="px-4 py-1 mx-auto text-lg font-semibold text-pink-400 bg-gray-800 border border-gray-700 sm:text-xl w-fit">
@@ -10,7 +10,7 @@
             Room kontak para dosen unpas tahun ajaran 2023/2024
         </p>
     </div>
-    <div class="mb-20">
+    <div class="">
         <!-- Pencarian Kontak -->
         <div class="flex items-center flex-1 px-2 mb-8 text-gray-300 bg-gray-800 border border-gray-300 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
