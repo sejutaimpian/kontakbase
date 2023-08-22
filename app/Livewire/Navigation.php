@@ -2,11 +2,9 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Layout;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
-class HomePage extends Component
+class Navigation extends Component
 {
     public $kode = '';
 
@@ -15,9 +13,8 @@ class HomePage extends Component
         return $this->redirect("/room/{$this->kode}", navigate: true);
     }
 
-    #[Title('HomePage')]
     public function render()
     {
-        return view('livewire.home-page');
+        return view('livewire.navigation');
     }
 }

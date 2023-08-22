@@ -17,7 +17,7 @@ class RoomPage extends Component
 
     public function mount($kode)
     {
-        $this->kontak_room = KontakRoom::where('kode_kontak', $kode)->first();
+        $this->kontak_room = KontakRoom::where('kode_kontak', $kode)->firstOrFail();
     }
 
     #[Title('RoomPage')]
