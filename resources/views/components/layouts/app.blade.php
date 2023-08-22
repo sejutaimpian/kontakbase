@@ -7,7 +7,7 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
-    <link rel="shortcut icon" href="logo-kontakbase.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo-kontakbase.png" type="image/x-icon">
 
     <!-- Styles -->
     @vite('resources/css/app.css')
@@ -17,7 +17,7 @@
     {{-- nav --}}
     <nav class="sticky top-0 z-10 flex gap-2 px-8 py-2 border-b bg-gray-900/50 border-b-gray-800 backdrop-blur-xl">
         <a href="/" wire:navigate class="flex items-center flex-none gap-2 sm:flex-1">
-            <img src="logo-kontakbase.png" alt="Logo Kontakbase" class="h-8">
+            <img src="/logo-kontakbase.png" alt="Logo Kontakbase" class="h-8">
             <div class="hidden text-2xl font-bold tracking-wide sm:block">KONTAKBASE</div>
         </a>
         <div class="flex items-center justify-end flex-1 gap-2 sm:gap-4">
@@ -33,7 +33,7 @@
                 <button
                     class="px-2 text-white bg-pink-400 border border-pink-300 rounded-lg hover:opacity-90 md:px-4">Cari</button>
             </form>
-            <a href="/buat-room" wire:navigate
+            <a href="/room" wire:navigate
                 class="inline-flex gap-2 px-2 md:px-4 py-0.5 rounded-lg bg-pink-400 hover:opacity-90 border border-pink-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">

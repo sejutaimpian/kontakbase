@@ -11,4 +11,9 @@ class Kontak extends Model
 
     protected $table = 'kontak';
     protected $fillable = ['kontak_room_id', 'nama_depan', 'nama_belakang', 'nomor_telepon'];
+
+    public function kontakRoom()
+    {
+        return $this->belongsTo(KontakRoom::class);
+    }
 }

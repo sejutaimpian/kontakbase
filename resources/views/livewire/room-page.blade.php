@@ -10,7 +10,7 @@
             Room kontak para dosen unpas tahun ajaran 2023/2024
         </p>
     </div>
-    <div class="">
+    <div class="min-h-[75vh]">
         <!-- Pencarian Kontak -->
         <div class="flex items-center flex-1 px-2 mb-8 text-gray-300 bg-gray-800 border border-gray-300 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -23,7 +23,7 @@
         </div>
         <!-- List Kontak -->
         <div class="last:border-b last:border-b-gray-700">
-            @foreach ($kontak as $item)
+            @foreach ($filteredKontak as $item)
             <div wire:key="{{ $item->id }}" class="border-t border-t-gray-700">
                 <div class="flex px-1 py-1 hover:bg-gray-800">
                     <div class="pr-4">{{ $loop->iteration }}</div>

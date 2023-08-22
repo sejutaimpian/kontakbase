@@ -10,7 +10,8 @@ class DevController extends Controller
 {
     public function index()
     {
-        return view('dev');
+        $kontak = Kontak::find(1);
+        dd($kontak->kontakRoom);
     }
     public function post(Request $request)
     {

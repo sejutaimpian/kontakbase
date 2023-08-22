@@ -11,4 +11,9 @@ class KontakRoom extends Model
 
     protected $table = 'kontak_room';
     protected $fillable = ['kode_kontak', 'judul', 'keterangan'];
+
+    public function kontak()
+    {
+        return $this->hasMany(Kontak::class);
+    }
 }
