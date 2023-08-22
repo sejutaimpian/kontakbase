@@ -9,7 +9,6 @@ use Livewire\Component;
 class HomePage extends Component
 {
     #[Title('HomePage')]
-    #[Layout('layouts.app')]
     public function render()
     {
         return view('livewire.home-page');

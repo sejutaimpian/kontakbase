@@ -58,7 +58,7 @@
         </div>
     </div>
     {{-- Form --}}
-    <div class="mt-20 text-gray-900 bg-gray-200">
+    <div class="mt-20 text-gray-900 bg-gray-200 scroll-mt-20" id="buat-room">
         <div class="px-4 py-4 text-xl font-bold text-gray-100 bg-gray-800 border-b-2 border-b-gray-900 sm:text-3xl">
             <div class="w-20 h-1 mb-2 bg-pink-400"></div>
             <h2 class="uppercase">
