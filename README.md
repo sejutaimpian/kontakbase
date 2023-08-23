@@ -1,66 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kontakbase => Kontakmu jadi accessible
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tentang Repo Ini
 
-## About Laravel
+Aplikasi ini bernama KONTAKBASE, singkatan dari kontak dan database. Kontakbase berfokus pada pencadangan dan pendistribusian kontak. Jadi kita bisa menyimpan kontak untuk diri kita sendiri atau bisa disebarluaskan kepada orang lain. flow aplikasi ini mirip dengan pemendek url. User tidak perlu login, bisa langsung membuat room kontak, lalu dapat mengaksesnya dari url sesuai kode yang diinputkan saat pembuatan room.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Contoh hasil yang dapat diketikkan pada kolom pencarian adalah `dosen-unpas`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Status Repo ini `stabil dan tidak akan ada perkembangan selanjutnya`. Jika kalian merasa program ini bermanfaat, silakan buat versi kalian yang lebih keren atau boleh fork dari repo saya.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Website ini hanyalah projek latihan Livewire saya. Mohon untuk tidak memanfaatkan website untuk mencadangkan/membagikan kontak, karena mungkin saja suatu hari nanti saya akan memformat database atau menghapus websitenya.
 
-## Learning Laravel
+## Teknologi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Laravel 10
+2. Livewire 3beta & AlpineJS
+3. TailwindCSS
+4. Heroicons
+5. Icons8.com
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Spesifikasi
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   PHP ^8.1
 
-## Laravel Sponsors
+## Instalasi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone repository ini melalui terminal git `git clone https://github.com/sejutaimpian/kontakbase.git` (pastikan sudah menginstall git)
+1. Pindah direktori ke folder kontakbase `cd kontakbase`
+1. `composer install`
+1. Copy file .env.example menjadi .env `cp .env.example .env`. Edit sesuai kebutuhan
+1. jalankan `php artisan key:generate`
+1. Buat database dengan nama 'kontakbase' lalu jalankan `php artisan migrate` (pastikan sudah run mysql)
+1. `php artisan serve`
 
-### Premium Partners
+## Lisensi
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Project ini merupakan software yang free dan open source di bawah [MIT license](https://opensource.org/licenses/MIT).
