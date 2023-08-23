@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="/logo-kontakbase.png" type="image/x-icon">
 
     <!-- Styles -->
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
+    <link rel="stylesheet" href="/build/assets/app.css">
 </head>
 
 <body class="antialiased text-gray-100 bg-gray-900">

@@ -45,7 +45,7 @@
         </div>
         <!-- List Kontak -->
         <div class="last:border-b last:border-b-gray-700">
-            @if (!$filteredKontak or !$filteredKontak->all())
+            @if (!$filteredKontak)
             <div class="text-center text-gray-400 font-bold text-xl sm:text-3xl">Kontak Tidak Dapat Ditemukan</div>
             @else
             @foreach ($filteredKontak as $item)
