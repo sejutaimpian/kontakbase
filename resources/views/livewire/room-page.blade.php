@@ -1,4 +1,18 @@
 <div class="container px-4 mx-auto">
+    {{-- Flash Message --}}
+    <div class="absolute top-14 right-4 z-10 inline-flex w-10/12 sm:w-1/2 items-center rounded-lg bg-green-100 px-6 py-3 text-base text-green-700"
+        role="alert" x-data="{show:true}" x-show="show" x-transition.opacity.out.duration.1500ms
+        x-init="setTimeout(()=> show = false, 2000)">
+        <span class="mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                <path fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                    clip-rule="evenodd" />
+            </svg>
+        </span>
+        Kamu berhasil masuk room kontakmu!
+    </div>
+    {{-- Room Kontak --}}
     <div class="pt-6 mb-20 text-center">
         <div x-data="{
             copyToClipboard(copyable){
@@ -17,7 +31,8 @@
             {{ $kontak_room->keterangan }}
         </p>
     </div>
-    <div class="min-h-[75vh]">
+    {{-- Kontak --}}
+    <div class="">
         <!-- Pencarian Kontak -->
         <div class="flex items-center flex-1 px-2 mb-8 text-gray-300 bg-gray-800 border border-gray-300 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
