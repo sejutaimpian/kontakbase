@@ -30,6 +30,7 @@ Website ini hanyalah projek latihan Livewire saya. Mohon untuk tidak memanfaatka
 1. Copy file .env.example menjadi .env `cp .env.example .env`. Edit sesuai kebutuhan
 1. jalankan `php artisan key:generate`
 1. Buat database dengan nama 'kontakbase' lalu jalankan `php artisan migrate` (pastikan sudah run mysql)
+1. Agar bisa bekerja dengan tailwindcss, ubah link href css menjadi @vite pada components.layouts.app.blade.php lalu jalankan terminal `npm run dev`
 1. `php artisan serve`
 
 ## Lisensi
