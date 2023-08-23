@@ -31,7 +31,7 @@
         <!-- List Kontak -->
         <div class="last:border-b last:border-b-gray-700">
             @if (!$filteredKontak or !$filteredKontak->all())
-            <div class="text-center text-red-700 font-bold text-xl sm:text-3xl">Kontak Tidak Dapat Ditemukan</div>
+            <div class="text-center text-gray-400 font-bold text-xl sm:text-3xl">Kontak Tidak Dapat Ditemukan</div>
             @else
             @foreach ($filteredKontak as $item)
             <div wire:key="{{ $item->id }}" class="border-t border-t-gray-700">

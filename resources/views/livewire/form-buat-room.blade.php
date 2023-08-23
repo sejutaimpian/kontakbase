@@ -52,24 +52,26 @@
             </div>
             <div class="px-4 py-2 border-gray-900 border-y-2">
                 <div class="mb-2 text-lg uppercase sm:text-2xl">Kontak-kontak</div>
-                @foreach ($kontak as $index => $item)
+                @foreach ($kontak as $item)
                 <div class="mb-4 border-t-2 border-t-gray-800">
                     <div class="flex flex-wrap pt-1">
                         <label for="nama-depan" class="w-full text-base sm:text-lg sm:w-3/12">Nama Depan</label>
-                        <input type="text" name="nama-depan" id="nama-depan" placeholder="Masukan nama depan"
+                        <input wire:model="kontak.{{ $loop->index }}.nama_depan" type="text" name="nama-depan"
+                            id="nama-depan" placeholder="Masukan nama depan"
                             class="w-full sm:w-9/12 px-2 py-0.5 focus-within:outline-none focus-within:ring-1 focus-within:ring-pink-400">
                     </div>
                     <div class="flex flex-wrap pt-1">
                         <label for="nama-belakang" class="w-full text-base sm:text-lg sm:w-3/12">Nama
                             Belakang</label>
-                        <input type="text" name="nama-belakang" id="nama-belakang" placeholder="Masukan nama belakang"
+                        <input wire:model="kontak.{{ $loop->index }}.nama_belakang" type="text" name="nama-belakang"
+                            id="nama-belakang" placeholder="Masukan nama belakang"
                             class="w-full sm:w-9/12 px-2 py-0.5 focus-within:outline-none focus-within:ring-1 focus-within:ring-pink-400">
                     </div>
                     <div class="flex flex-wrap pt-1">
                         <label for="nomor-telepon" class="w-full text-base sm:text-lg sm:w-3/12">Nomor
                             Telepon</label>
-                        <input type="number" max="15" name="nomor-telepon" id="nomor-telepon"
-                            placeholder="Masukan 628..."
+                        <input wire:model="kontak.{{ $loop->index }}.nomor_telepon" type="number" max="6289999999999"
+                            name="nomor-telepon" id="nomor-telepon" placeholder="Masukan 628..."
                             class="w-full sm:w-9/12 px-2 py-0.5 focus-within:outline-none focus-within:ring-1 focus-within:ring-pink-400">
                     </div>
                 </div>
@@ -77,7 +79,7 @@
                 {{-- Action --}}
                 <div class="flex justify-end gap-2">
                     <div class="flex items-center overflow-hidden text-white rounded-lg">
-                        <button type="button" x-on:click="banyak--"
+                        <button type="button" wire:click='kurangi_kontak'
                             class="inline-flex gap-2 px-2 md:px-4 py-0.5 bg-pink-400 hover:opacity-90">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
@@ -88,7 +90,7 @@
                                 Kurangi Kontak
                             </span>
                         </button>
-                        <button type="button" x-on:click="banyak++"
+                        <button type="button" wire:click='tambah_kontak'
                             class="inline-flex gap-2 px-2 md:px-4 py-0.5 bg-pink-400 hover:opacity-90">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
