@@ -1,6 +1,6 @@
 <div class="container px-4 mx-auto">
     {{-- Flash Message --}}
-    <div class="absolute z-10 inline-flex items-center w-10/12 px-6 py-3 text-base text-green-700 bg-green-100 rounded-lg top-14 right-4 sm:w-1/2"
+    <div class="fixed z-10 inline-flex items-center w-10/12 px-6 py-3 text-base text-green-700 bg-green-100 rounded-lg top-14 right-4 sm:w-1/2"
         role="alert" x-data="{show:true}" x-show="show" x-transition.opacity.out.duration.1500ms
         x-init="setTimeout(()=> show = false, 2000)">
         <span class="mr-2">
