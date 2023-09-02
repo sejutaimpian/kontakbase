@@ -6,8 +6,17 @@
             <h2 class="uppercase">
                 Formulir Room Kontak
             </h2>
+            <h2 x-text="$wire.kontak.length"></h2>
         </div>
-        <form class="" wire:submit='simpan_room'>
+        <form class="" x-on:submit.prevent="
+        if($wire.kontak.length === 1){
+            if(confirm('Yakin cuma masukin 1 kontak? itu bisa ditambah lho...')){
+                $wire.simpan_room()
+            }    
+        }else{
+            $wire.simpan_room()
+        }
+        ">
             @csrf
             <div class="px-4 py-2 border-gray-900 border-y-2">
                 <div class="text-lg uppercase sm:text-2xl">Room Kontak</div>
